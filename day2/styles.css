@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+:root{
+    --pink-color: #e26e70;
+}
+body{
+    height: 100vh;
+    background: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+    overflow: hidden;
+}
+.close{
+    cursor: pointer;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+button{
+    outline: none;
+    border: none;
+}
+.btn_model{
+    padding: 20px 40px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    font-size: 25px;
+}
+.model{
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}   
+.model_inner{
+    width: 400px;
+    background: #fff;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    overflow: hidden;
+    animation: model_show 0.2s linear;
+
+}
+.model_inner .model_close{
+    justify-content: space-between;
+    background: var(--pink-color);  
+    padding: 10px;  
+}
+.model .model_content{
+    padding: 15px;
+}
+.model .model_content h1{
+    margin-bottom: 15px;
+}
+.model .model_content p{
+    margin-bottom: 30px;
+}
+.model .model_content button{
+    margin-left: auto;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background: var(--pink-color);
+}
+.hide{
+    display: none;
+}
+
+@keyframes model_show{
+    from{
+        top: -200px;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
