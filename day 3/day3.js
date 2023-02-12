@@ -23,6 +23,11 @@ let handel = () => {
             }else{
                 arrowRight.classList.remove('hide')
             } 
+            if(currentIndex == 0){
+                arrowLeft.classList.add('hide')
+            }else{
+                arrowLeft.classList.remove('hide')
+            }
     }
     getClose.onclick = () => {
         gallery.classList.toggle('show')
@@ -44,11 +49,7 @@ let handel = () => {
             currentIndex--
             show()
         }
-        if(currentIndex == 0){
-            arrowLeft.classList.add('hide')
-        }else{
-            arrowLeft.classList.remove('hide')
-        }
+        
     }
 }
 
